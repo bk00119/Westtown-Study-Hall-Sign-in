@@ -1,0 +1,36 @@
+body {
+  background-image: url("https://photos.smugmug.com/Campus/Campus-Scenes/i-d9PBSch/0/575ccfe3/XL/20131008_184749-XL.jpg");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+}
+
+#my-signin2 {
+  padding-top: 3.5vw;
+  padding-bottom: 3.5vw;
+  padding-right: 2vw;
+  padding-left: 2vw;
+  background-color: #ffffff;
+  border-radius: 15px;
+
+
+  position: inherit;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+
+.title {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  width: 100vw;
+  text-align: center;
+  color: white;
+  font-size: 7vw;
+  padding-bottom: 10vh;
+  margin: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+}
