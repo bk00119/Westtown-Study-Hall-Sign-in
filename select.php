@@ -12,8 +12,8 @@ session_start();
 <?php
 require 'home/status/SH_connect_to_db.php';
 $email = $_SESSION["email"];
-$emailValue = "SELECT * FROM test.`student_faculty` WHERE email ='".$email."'";
-$positionValue = "SELECT position FROM test.`student_faculty` WHERE email ='".$email."'";
+$emailValue = "SELECT * FROM test.`users` WHERE email ='".$email."'";
+$positionValue = "SELECT position FROM test.`users` WHERE email ='".$email."'";
 $result = mysqli_query($mysqli, $emailValue);
 
 echo $positionResult;

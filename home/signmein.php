@@ -3,7 +3,7 @@ session_start();
 require 'status/SH_connect_to_db.php';
 date_default_timezone_set('America/New_York');
 
-$query = "SELECT*FROM student_faculty WHERE user_id = '".$_SESSION["user_ID"]."'";
+$query = "SELECT*FROM users WHERE user_id = '".$_SESSION["user_ID"]."'";
 $result = mysqli_query($mysqli, $query);
 $check = "SELECT*FROM signins WHERE user_id = '".$_SESSION["user_ID"]."' AND signins.date = CURRENT_DATE()";
 $checkResult = mysqli_query($mysqli, $check);

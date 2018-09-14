@@ -5,12 +5,12 @@ if ($_SESSION["location"] != "DA") {
   $query="SELECT firstname, lastname, dorm, dorm_room FROM
 (SELECT * FROM signins
 WHERE DATE(`date`) = CURRENT_DATE()) temp
-RIGHT JOIN test.`student_faculty`
-ON temp.user_id = `student_faculty`.`user_ID`
-WHERE `student_faculty`.dorm = '".$_SESSION["location"]."'
+RIGHT JOIN test.`users`
+ON temp.user_id = `users`.`user_ID`
+WHERE `users`.dorm = '".$_SESSION["location"]."'
 AND temp.confirm_ts_1 IS NULL
 AND temp.sign_ts IS NULL
-AND `student_faculty`.name <> ''";
+AND `users`.name <> ''";
     $result = mysqli_query($mysqli, $query);
     if ($result->num_rows > 0)
     {echo" <tr>
@@ -31,13 +31,13 @@ else {
   $query = "SELECT firstname, lastname, dorm, dorm_room FROM
 (SELECT * FROM signins
 WHERE DATE(`date`) = CURRENT_DATE()) temp
-RIGHT JOIN test.`student_faculty`
-ON temp.user_id = `student_faculty`.`user_ID`
-WHERE `student_faculty`.dorm <> 'day'
+RIGHT JOIN test.`users`
+ON temp.user_id = `users`.`user_ID`
+WHERE `users`.dorm <> 'day'
 AND temp.confirm_ts_1 IS NULL
 AND temp.sign_ts IS NULL
-AND `student_faculty`.name <> ''
-ORDER BY `student_faculty`.dorm";
+AND `users`.name <> ''
+ORDER BY `users`.dorm";
 
   $result = mysqli_query($mysqli, $query);
   if ($result->num_rows > 0)

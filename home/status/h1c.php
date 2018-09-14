@@ -3,7 +3,7 @@
 <?php
 //SELECT * FROM student_profiles LEFT JOIN signinrecords ON student_profiles.student = signinrecords.student WHERE student_profiles.dorm = 'B3' AND signinrecords.sign_ts IS NULL AND signinrecords.confirmed_by IS NULL
 if ($_SESSION["location"] != "DA") {
-  $query="SELECT * FROM signins INNER JOIN student_faculty ON student_faculty.user_ID = signins.user_id
+  $query="SELECT * FROM signins INNER JOIN users ON users.user_ID = signins.user_id
   WHERE signins.location1 = '".$_SESSION["location"]."'
   AND signins.date = CURRENT_DATE AND signins.sign_ts IS NOT NULL AND signins.confirm1 IS NOT NULL AND signins.confirm_ts_1 IS NOT NULL";
 
@@ -44,7 +44,7 @@ if ($_SESSION["location"] != "DA") {
       }
   }
   else {
-    $query="SELECT * FROM signins INNER JOIN student_faculty ON student_faculty.user_ID = signins.user_ID
+    $query="SELECT * FROM signins INNER JOIN users ON users.user_ID = signins.user_ID
     WHERE signins.date = CURRENT_DATE
     AND signins.sign_ts IS NOT NULL AND signins.confirm1 IS NOT NULL AND signins.confirm_ts_1 IS NOT NULL";
 
