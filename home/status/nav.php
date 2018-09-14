@@ -35,6 +35,12 @@ session_start();
           <li><a href="index.php?location=Health%20Center">Health Center</a></li>
         </ul>
       </li>
+      <!-- Note function...
+      <li class="memo"><a href="note.php">Note</a></li>
+      -->
+      <li class="contact" id="email">
+        <a href="mailto:briankim00119@gmail.com">Having a problem?</a>
+      </li>
     </ul>
   </div>
 </nav>

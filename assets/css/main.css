@@ -1135,6 +1135,7 @@ input, select, textarea {
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
+			/*The background image is from the school gallery.*/
 			background-image: url("https://photos.smugmug.com/Campus/Campus-Scenes/i-rcWthR6/0/a13a88b6/X2/2013-11-00%20Boys%20End%20morning%20view-X2.jpg");
 			background-position: center;
 			background-size: cover;

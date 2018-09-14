@@ -7,6 +7,8 @@
 <html>
 	<head>
 		<title>Westtown Sign-in</title>
+		<link rel="icon" href="images/clipboard.png" width="50px">
+
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
@@ -36,13 +38,12 @@
 				<!-- Header -->
 					<header id="header">
 						<div class="logo">
-							<span class="icon fa-diamond"></span>
+							<span class="icon fa fa-wikipedia-w" style="padding-top:2rem;"></span>
 						</div>
 						<div class="content">
 							<div class="inner">
 								<h1>Study Hall<br>Sign-in</h1>
-								<p>A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
-				for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p>
+								<p>Westonian's Study Hall Sign-in System.<br></br>Built by Brian Kim'19, Alina Zhao'19, Samantha Dow'19, and Cate Cappuccio'19.</p>
 							</div>
 						</div>
 						<nav>
@@ -56,21 +57,11 @@
 						</nav>
 					</header>
 
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-							</article>
-
-					</div>
-
 				<!-- Footer -->
 					<footer id="footer">
+
+						<div class="col-4 col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="mailto:briankim00119@gmail.com" style="color: #ffffff;">contact</a></div>
+
 						<p class="copyright">&copy; BK, AZ, SD, and CC</a>.</p>
 					</footer>
 
@@ -82,6 +73,8 @@
 		<!-- Scripts -->
 			<script>
 				function onSuccess(googleUser){
+					signOut();
+
 					var profile = googleUser.getBasicProfile();
 					//console.log("ID: " + profile.getId()); // Don't send this directly to your server!
 					//console.log('Full Name: ' + profile.getName());
@@ -94,7 +87,7 @@
 
 					var approved_user = profile.getEmail();
 					if (approved_user.match("westtown.edu$")) {
-						if (window.confirm("Do you want to sign in?")) {
+						//if (window.confirm("Do you want to sign in?")) {
 
 							//USE THIS FOR THE AFTER FINISHING UP THE SIGNINN PAGE!
 							//window.location.href = "signinn.php";
@@ -118,10 +111,10 @@
 
 							//USE THIS FOR TESTING!
 							window.location.href = "select.php";
-						}
-						else {
-							signOut();
-						}
+						//}
+						//else {
+							//signOut();
+						//}
 					}
 					else {
 						window.alert("You're not an apporved user.");
@@ -166,4 +159,5 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+	<?php session_destroy(); ?>
 </html>
