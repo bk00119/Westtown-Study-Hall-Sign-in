@@ -25,7 +25,7 @@ date_default_timezone_set('America/New_York');
 <?php include 'nav.php';?>
 
 <?php
-if (date("Hi") >= 0730 and date("Hi") < 2030){
+if (date("Hi") >= 0730 and date("Hi") < 2020){
 ?>
 
 <div class="container" style="margin-top:50px">
@@ -147,7 +147,7 @@ if (date("Hi") >= 0730 and date("Hi") < 2030){
 
 <?php
 }
-elseif (date("Hi")>= 2030 and date("Hi")<=2300) {
+elseif (date("Hi")>= 2020 and date("Hi")<=2400) {
 ?>
 
 <div class="container" style="margin-top:50px">

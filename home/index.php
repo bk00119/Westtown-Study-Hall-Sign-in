@@ -46,7 +46,7 @@ body {text-align: center;}
 <div id = "dropd" class ="container">
 <br/>
 <?php
-if (date("Hi") <= 1925){
+if (date("Hi") <= 1926){
 ?>
 	<div class="container">
 				<h3>1st Half</h3>
@@ -101,7 +101,7 @@ else {
 
 
 <?php
-if (date("Hi") <= 2025) {
+if (date("Hi") <= 2026) {
 ?>
 
 <div class="container">
@@ -171,7 +171,7 @@ else {
 ?>
 
 <?php
-	if(date("Hi") <= 2025) {
+	if(date("Hi") <= 2026) {
 ?>
 	<div class="container">
 	<button type="button" class="btn btn-lg btn-info" onClick="sign()" color="#263238"><?php echo $signButton; ?></button>
@@ -193,7 +193,7 @@ else {
 </div>
 
 <?php
-if (date("Hi") <= 1925) {
+if (date("Hi") <= 1926) {
 ?>
 <script type="text/javascript">
 function sign(){
