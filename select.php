@@ -27,7 +27,11 @@ if ($result->num_rows > 0)
     $_SESSION["dorm"] = $row['dorm'];
 
     if ($row["position"] == 's') {
-      header('Location: http://signin.westtown.edu/home/index.php');
+    ?>
+    <script>
+      window.location.href = "http://signin.westtown.edu/home/index.php";
+    </script>
+    <?php
     }
     elseif ($row["position"] == 'pr') {
       ?><script>
@@ -43,13 +47,23 @@ if ($result->num_rows > 0)
       </script><?php
     }
     elseif ($row["position"] == 'f' or 'F') {
-      header('Location: http://signin.westtown.edu/home/status/index.php');
+    ?>
+    <script>
+      window.location.href = "http://signin.westtown.edu/home/status/index.php";
+    </script>
+    <?php
     }
     else {
-      echo "Who are you...";
-      echo $row["position"];
-      echo $row["email"];
-      echo $row["user_ID"];
+      echo "Try logging in again...";
+    ?>
+    <script>
+    window.location.href = "http://signin.westtown.edu";
+    </script>
+    <?php
+
+      //echo $row["position"];
+      //echo $row["email"];
+      //echo $row["user_ID"];
     }
   }
 }
