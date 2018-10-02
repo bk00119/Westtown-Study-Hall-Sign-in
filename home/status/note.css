@@ -1,0 +1,88 @@
+@font-face {
+    font-family: "SF";
+    font-weight: 200;
+    src:url("http://polaris.westtown.edu/fonts/SF-UI-Display-Thin.otf");
+}
+
+@font-face {
+    font-family: "SF";
+    font-weight: 300;
+    src: url("/studyhallsignin/home/css/SF-UI-Display-Light.otf");
+}
+
+@font-face {
+    font-family: "SF";
+    font-weight: 400;
+    src: url("/studyhallsignin/home/css/SF-UI-Display-Regular.otf");
+}
+
+@font-face {
+    font-family: "SF";
+    font-weight: 500;
+    src: url("/studyhallsignin/home/css/SF-UI-Display-Medium.otf");
+}
+
+@font-face {
+    font-family: "SF";
+    font-weight: 800;
+    src: url("/studyhallsignin/home/css/SF-UI-Display-Heavy.otf");
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+@media screen and (max-width: 480px) {
+  html, body {
+    min-width: 320px;
+  }
+}
+
+
+html, body{
+  margin: 0;
+  font-size: 17px;
+  color: rgba(27, 31, 34, 0.85);
+  text-align: center;
+  background-image: url("../css/bg.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.chatbox {
+  padding: 3%;
+  border-radius: 15px;
+  height: 100%;
+  background-color: #B8C8EC;
+}
+
+#note {
+  width: 100%;
+}
+
+#note_row {
+  border-top: 0.1px solid gray;
+}
+
+#note_content {
+  max-width: 50%;
+  overflow-wrap: break-word;
+
+  float: left;
+  padding-left: 15%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}
+
+#note_time {
+  float: right;
+  padding-right: 15%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}
+
+#message {
+  width: 80%;
+}

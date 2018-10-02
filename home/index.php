@@ -8,11 +8,11 @@ date_default_timezone_set('America/New_York');
 <!-- Required meta tags - these 3 meta tags *must* come first in the head section -->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
 <!-- specify brower tab for this page -->
 <title>Sign-In</title>
-<link rel="icon" href="images/clipboard.png" width="50px">
+<link rel="icon" href="../images/icon.png">
 
 <!-- include Bootstrap CSS linkage -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -26,13 +26,20 @@ date_default_timezone_set('America/New_York');
 
 </head>
 
-<body>
+<style>
+	html body {
+		height: 100%;
+		background: url("css/bg.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+</style>
 
+<body>
 <!-- everything visible on page goes in here -->
 
-<style>
-body {text-align: center;}
-</style>
+
 <div class="container"> <br/>
 	<h1>Sign-In</h1>
 	<br/>
@@ -188,9 +195,7 @@ else {
 </div>
 <br/>
 <br/>
-<div class="container">
-	<a href="https://www.westtown.edu/uploaded/files/academics/2017-18_US_Handbook.pdf">Study Hall Expectations</a>
-</div>
+
 
 <?php
 if (date("Hi") <= 1926) {
@@ -203,7 +208,7 @@ function sign(){
 	var user = <?php echo $_SESSION["user_ID"]; ?>;
 
 if (selection1 == "" || selection2 == ""){
-	alert("Please select location.")
+	alert("Please select the location.")
 }
 else{
  var data1 = {
@@ -262,8 +267,10 @@ else{
 		{
 			if (response == "ok"){
 				//window.location.href = 'signin_complete.php';
-				alert("Success!");
+				//alert("Success!");
 				//WILL THIS LOGOUT THE USER??
+
+				<?php session_destroy(); ?>
 				window.location.href = '../index.php';
 				//signOut();
 			}
@@ -280,7 +287,10 @@ else{
 <!-- main footer code -->
 <div class="container">
 	<div class="row">
-		<div class="col-4 col-xs-4 col-sm-4 col-md-4 col-lg-4"> Under Development </div>
+		<div class="container">
+			<a href="https://www.westtown.edu/uploaded/files/academics/2017-18_US_Handbook.pdf" style="color: #ffffff;">Study Hall Expectations</a>
+		</div><br></br>
+		<div class="col-4 col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="mailto:brian.kim@westtown.edu" style="color: #ffffff;">contact</a></div>
 		<div class="col-4 col-xs-4 col-sm-4 col-md-4 col-lg-4"> Study Hall Sign-In System </div>
 		<div class="col-4 col-xs-4 col-sm-4 col-md-4 col-lg-4">
 			<!-- Note: there are specific legal requirements to reserve rights successfully -->

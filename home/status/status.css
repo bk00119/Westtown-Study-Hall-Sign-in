@@ -1,0 +1,12 @@
+html, body {
+  color: #F5FFFA;
+  background-image: url("../css/bg.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+table {
+  color: #F5FFFA;
+}
